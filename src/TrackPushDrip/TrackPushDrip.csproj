@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <!-- Roll forward to future major versions of the netcoreapp as needed -->
+    <RollForward>Major</RollForward>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- CDK Construct Library dependencies -->
+    <PackageReference Include="Amazon.CDK" Version="1.117.0" />
+    <PackageReference Include="Amazon.CDK.AWS.CodeBuild" Version="1.117.0" />
+    <PackageReference Include="Amazon.CDK.AWS.CodePipeline" Version="1.117.0" />
+    <PackageReference Include="Amazon.CDK.AWS.CodePipeline.Actions" Version="1.117.0" />
+    <PackageReference Include="Amazon.CDK.AWS.SSM" Version="1.117.0" />
+    <PackageReference Include="Amazon.CDK.Pipelines" Version="1.117.0" />
+
+    <!-- jsii Roslyn analyzers (un-comment to obtain compile-time checks for missing required props
+    <PackageReference Include="Amazon.Jsii.Analyzers" Version="*" PrivateAssets="all" />
+    -->
+  </ItemGroup>
+
+</Project>
