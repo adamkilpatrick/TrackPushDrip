@@ -40,7 +40,9 @@ namespace TrackPushDrip
                             new BuildEnvironmentVariable() { Value = StringParameter.ValueForStringParameter(this, "PIPELINE_ACCOUNT")} 
                         } 
                     },
-                    BuildCommand = "npm run build"
+                    InstallCommand = "npm install -g aws-cdk",
+                    BuildCommand = "cdk synth",
+                    SynthCommand = "cdk synth"
                 })
             });
         }
