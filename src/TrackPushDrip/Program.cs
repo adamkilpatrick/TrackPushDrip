@@ -13,17 +13,14 @@ namespace TrackPushDrip
             var app = new App();
             var defaultEnv = new Amazon.CDK.Environment
             {
-                Account = "PIPELINE_ACCOUNT",
+                Account = System.Environment.GetEnvironmentVariable("PIPELINE_ACCOUNT"),
                 Region = "us-east-1",
             };
 
             new PipelineStack(app, "PipelineStack", new PipelineStackProps
             {
                 PipelineName = "TrackPushDrip",
-                GithubOwner = StringParameter.ValueForStringParameter(app, "GITHUB_OWNER"),
                 Env = defaultEnv,
-                GithubRepo = StringParameter.ValueForStringParameter(app, "GITHUB_REPO"),
-                
             });
 
             app.Synth();

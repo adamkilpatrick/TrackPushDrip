@@ -9,8 +9,6 @@ namespace TrackPushDrip
     {
 
         public string PipelineName { get; init; }
-        public string GithubOwner { get; init; }
-        public string GithubRepo { get; init; }
 
     }
 }
